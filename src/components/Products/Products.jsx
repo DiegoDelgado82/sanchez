@@ -2,7 +2,7 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { db } from "../../Config/firebaseConfig";
 import { ItemList } from "../ItemList/ItemList";
-
+import cargando from "../../assets/img/cargando.gif";
 //Componente que busca los productos por categoría
 
 export const Products = ({ cat }) => {
@@ -42,7 +42,7 @@ export const Products = ({ cat }) => {
     <>
       {isLoading ? (
         <div className="d-flex align-items-center justify-content-center">
-          
+            <img className="cargando" src={cargando} alt="cargando" />
         </div>
       ) : (
         <ItemList products={products} />
