@@ -1,4 +1,4 @@
-import  "./Cartwidget.css"
+import  "./CartWidget.css"
 import React, { useContext } from "react";
 //muestra el carrito de compra con el número de items cargados 
 import { CartContext } from "../../context/CartContext";
